@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "study_id": "keigo06-e2e-verify",
+  "study_name": "e2e-verify",
+  "author": "keigo06",
+  "generated_at": "2026-06-22T11:36:40Z",
+  "warm_start_from": null,
+  "warm_start_top_n": 5,
+  "objective": {
+    "mode": "scalar",
+    "direction": "minimize",
+    "terms": [
+      {
+        "metric": "time",
+        "weight": 1.0
+      }
+    ],
+    "penalty": 150.0
+  },
+  "metric_defs": {
+    "time": {
+      "unit": "s",
+      "description": "sum of first required_laps race-lap times (no penalty seconds)"
+    },
+    "e_y_rms": {
+      "unit": "m",
+      "description": "RMS of lateral error over scored race laps (ref-path dependent)"
+    },
+    "e_y_p95": {
+      "unit": "m",
+      "description": "95th percentile of |lateral error| over scored race laps"
+    }
+  },
+  "required_laps": 2,
+  "reference_path": null,
+  "develop_value": null,
+  "develop_source": null,
+  "n_trials": 2,
+  "n_complete": 2,
+  "n_valid": 1,
+  "valid_rate": 0.5,
+  "best_trial": {
+    "number": 0,
+    "value": 129.9528579711914,
+    "metrics": {
+      "time": 129.9528579711914,
+      "e_y_rms": 0.5028653247271596,
+      "e_y_p95": 1.0634144448376452
+    },
+    "exit_reason": "ok",
+    "params": {
+      "Q0": 2351448.0803017244,
+      "Q1": 25396237.98191195,
+      "QN0": 298017.1403346092,
+      "QN1": 629.5726793459467,
+      "R0": 68343.78329472778
+    },
+    "delta_develop": null
+  },
+  "param_importance": {},
+  "trials": [
+    {
+      "number": 0,
+      "value": 129.9528579711914,
+      "metrics": {
+        "time": 129.9528579711914,
+        "e_y_rms": 0.5028653247271596,
+        "e_y_p95": 1.0634144448376452
+      },
+      "state": "COMPLETE",
+      "exit_reason": "ok",
+      "params": {
+        "Q0": 2351448.0803017244,
+        "Q1": 25396237.98191195,
+        "QN0": 298017.1403346092,
+        "QN1": 629.5726793459467,
+        "R0": 68343.78329472778
+      }
+    },
+    {
+      "number": 1,
+      "value": 150.0,
+      "metrics": null,
+      "state": "COMPLETE",
+      "exit_reason": "crash",
+      "params": {
+        "Q0": 767009.17703957,
+        "Q1": 84342124.94988967,
+        "QN0": 1854174.2005500582,
+        "QN1": 18878.963789769194,
+        "R0": 5485869.478034939
+      }
+    }
+  ]
+}
