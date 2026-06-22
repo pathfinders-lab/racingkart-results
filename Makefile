@@ -4,7 +4,7 @@ install:
 	uv sync
 
 test:
-	uv run pytest tests/ -v
+	PYTHONPATH="" uv run pytest tests/ -v
 
 lint:
 	uv run ruff check render/ tests/
