@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "study_id": "keigo-g2-check",
+  "study_name": "g2-check",
+  "author": "keigo",
+  "generated_at": "2026-06-22T10:00:38Z",
+  "warm_start_from": null,
+  "warm_start_top_n": 5,
+  "objective": {
+    "mode": "scalar",
+    "direction": "minimize",
+    "terms": [
+      {
+        "metric": "time",
+        "weight": 1.0
+      }
+    ],
+    "penalty": 150.0
+  },
+  "metric_defs": {
+    "time": {
+      "unit": "s",
+      "description": "sum of first required_laps race-lap times (no penalty seconds)"
+    },
+    "e_y_rms": {
+      "unit": "m",
+      "description": "RMS of lateral error over scored race laps (ref-path dependent)"
+    },
+    "e_y_p95": {
+      "unit": "m",
+      "description": "95th percentile of |lateral error| over scored race laps"
+    }
+  },
+  "required_laps": 2,
+  "reference_path": null,
+  "develop_value": null,
+  "develop_source": null,
+  "n_trials": 2,
+  "n_complete": 2,
+  "n_valid": 2,
+  "valid_rate": 1.0,
+  "best_trial": {
+    "number": 0,
+    "value": 129.85291290283203,
+    "metrics": null,
+    "exit_reason": "timeout",
+    "params": {
+      "Q0": 3000000.0,
+      "Q1": 90000000.0,
+      "QN0": 1000000.0,
+      "QN1": 1000.0,
+      "R0": 100000.0
+    },
+    "delta_develop": null
+  },
+  "param_importance": {},
+  "trials": [
+    {
+      "number": 0,
+      "value": 129.85291290283203,
+      "metrics": null,
+      "state": "COMPLETE",
+      "exit_reason": "timeout",
+      "params": {
+        "Q0": 3000000.0,
+        "Q1": 90000000.0,
+        "QN0": 1000000.0,
+        "QN1": 1000.0,
+        "R0": 100000.0
+      }
+    },
+    {
+      "number": 1,
+      "value": 130.02781677246094,
+      "metrics": {
+        "time": 130.02781677246094,
+        "e_y_rms": 0.5003867596804635,
+        "e_y_p95": 1.053285521907339
+      },
+      "state": "COMPLETE",
+      "exit_reason": "timeout",
+      "params": {
+        "Q0": 3000000.0,
+        "Q1": 90000000.0,
+        "QN0": 1000000.0,
+        "QN1": 1000.0,
+        "R0": 100000.0
+      }
+    }
+  ]
+}
