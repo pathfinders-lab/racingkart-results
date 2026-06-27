@@ -3,7 +3,7 @@
   "study_id": "keigo06-mpc-q4",
   "study_name": "mpc-q4",
   "author": "keigo06",
-  "generated_at": "2026-06-23T02:46:34Z",
+  "generated_at": "2026-06-27T09:47:44Z",
   "warm_start_from": null,
   "warm_start_top_n": 5,
   "objective": {
@@ -29,10 +29,18 @@
     "e_y_p95": {
       "unit": "m",
       "description": "95th percentile of |lateral error| over scored race laps"
+    },
+    "solve_time_ms_mean": {
+      "unit": "ms",
+      "description": "mean MPC solver time over scored race laps"
+    },
+    "solve_time_ms_p95": {
+      "unit": "ms",
+      "description": "95th-percentile MPC solver time over scored race laps"
     }
   },
   "required_laps": 2,
-  "reference_path": "env/final_ver4/traj_mincurv.csv",
+  "reference_path": null,
   "develop_value": null,
   "develop_source": null,
   "n_trials": 60,
